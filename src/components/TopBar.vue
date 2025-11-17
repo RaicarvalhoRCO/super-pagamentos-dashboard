@@ -1,6 +1,6 @@
 <template>
     <header class="topbar d-flex align-items-center justify-content-between p-3">
-        <img src="/src/assets/logo.png" alt="Logo">
+        <img src="/src/assets/logo.png" alt="Logo" class="logo">
         <div class="super_topbar d-flex gap-2">
             <span>Super central de gestão</span>
             <img src="/src/assets/super_gestao_icon.png" alt="">
@@ -59,8 +59,8 @@ export default {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    cursor: pointer; 
+    padding-left: 16px;
 }
 
 .super_topbar {
