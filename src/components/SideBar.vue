@@ -1,5 +1,5 @@
 <template>
-    <aside class="sidebar d-flex flex-column p-3">
+    <aside class="sidebar d-flex flex-column">
         <nav>
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -11,7 +11,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Cobranças</a>
                 </li>
-                <!-- Adicione mais itens conforme necessário -->
             </ul>
         </nav>
     </aside>
@@ -29,6 +28,7 @@ export default {
     height: 100vh;
     width: 250px;
     border-right: 1px solid #ddd;
+    padding-top: 64px;
 }
 
 .nav-link {
