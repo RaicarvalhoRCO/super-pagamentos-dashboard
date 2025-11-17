@@ -28,7 +28,7 @@
 <script>
 import IconCircle from './icons/IconCircle.vue';
 import IconBell from './icons/IconBell.vue';
-import IconSettings from './icons/IconSettings.vue';
+import IconSettings from './icons/IconConfiguracoes.vue';
 
 export default {
     name: 'TopBar',

@@ -48,4 +48,11 @@ export default {
 .btn-link span {
     font-size: 0.75rem;
 }
+
+/* Esconde o footer em telas maiores que 768px */
+@media (min-width: 768px) {
+    .mobile-footer {
+        display: none !important;
+    }
+}
 </style>
