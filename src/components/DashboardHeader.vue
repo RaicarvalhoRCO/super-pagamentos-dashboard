@@ -102,6 +102,7 @@ export default {
   height: 48px;
   border: 1px solid #D9D9D9;
   border-radius: 32px;
+  background-color: white;
 }
 
 .selector_container svg {
@@ -115,6 +116,7 @@ export default {
 }
 
 .selector_date {
+  background-color: white;
   position: relative;
   height: 48px;
   font-family: Plus Jakarta Sans;

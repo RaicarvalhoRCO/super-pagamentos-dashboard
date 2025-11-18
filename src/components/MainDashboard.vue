@@ -9,6 +9,13 @@
       </VCol>
     </VRow>
 
+    <!-- Alerta de Transferência Pendente -->
+    <VRow class="mt-4">
+      <VCol cols="12">
+        <TransferenciaPendente />
+      </VCol>
+    </VRow>
+
     <!-- Cards de Status -->
     <VRow class="mt-6">
       <VCol cols="12">
@@ -16,7 +23,7 @@
       </VCol>
     </VRow>
 
-    <!-- Conversão e Bandeiras -->  
+    <!-- Conversão e Bandeiras -->
     <VRow class="mt-6">
       <VCol cols="12" md="6">
         <ConversaoModalidade />
@@ -32,6 +39,7 @@
 import { defineComponent } from 'vue';
 import DashboardHeader from './DashboardHeader.vue';
 import FaturamentoCard from './FaturamentoCard.vue';
+import TransferenciaPendente from './TransferenciaPendente.vue';
 import StatusCobrancas from './StatusCobrancas.vue';
 import ConversaoModalidade from './ConversaoModalidade.vue';
 import BandeirasUtilizadas from './BandeirasUtilizadas.vue';
@@ -41,6 +49,7 @@ export default defineComponent({
   components: {
     DashboardHeader,
     FaturamentoCard,
+    TransferenciaPendente,
     StatusCobrancas,
     ConversaoModalidade,
     BandeirasUtilizadas,
@@ -50,7 +59,8 @@ export default defineComponent({
 
 <style scoped>
 .main-dashboard {
-  padding: 100px 160px;
+  padding: 100px 5% 100px 20%;
+  background-color: #EDEFF4;
 }
 
 @media (max-width: 768px) {

@@ -1,7 +1,7 @@
 <template>
     <VCard class="conversao-card pa-6">
-        <h3 class="text-h6 font-weight-bold mb-6">Conversão por modalidade</h3>
-        <VRow>
+        <h4 class="title font-weight-bold mb-6">Conversão por modalidade</h4>
+        <VRow class="conversao-container">
             <VCol v-for="modalidade in modalidades" :key="modalidade.nome" cols="6" md="3">
                 <div class="modalidade-item text-center">
                     <div class="grafico-circular"
@@ -24,9 +24,9 @@ export default {
         return {
             modalidades: [
                 { nome: 'Crédito', percentual: 92, cor: '#0641FC' },
-                { nome: 'Débito', percentual: 95, cor: '#9D5CFF' },
-                { nome: 'Boleto', percentual: 42, cor: '#C4B5FD' },
-                { nome: 'Pix', percentual: 98, cor: '#E0E7FF' }
+                { nome: 'Débito', percentual: 95, cor: '#852DF6' },
+                { nome: 'Boleto', percentual: 42, cor: '#B882FE' },
+                { nome: 'Pix', percentual: 98, cor: '#9DB5FF' }
             ]
         };
     },
@@ -39,13 +39,29 @@ export default {
 </script>
 
 <style scoped>
+
+.title{
+  font-family: Plus Jakarta Sans;
+  font-weight: 600;
+  font-size: 16px;
+}
+
 .conversao-card {
+    width: 620px;
+    height: 230px;
     border-radius: 12px;
+
+}
+
+.conversao-container{
+  border: 1px solid #EEEEEE;
+  border-radius: 8px;
 }
 
 .modalidade-item {
     display: flex;
     flex-direction: column;
+    padding: 10px;
     align-items: center;
 }
 
@@ -70,9 +86,12 @@ export default {
 }
 
 .percentual-texto {
+    color: #2A2E33;
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-style: Regular;
     font-size: 16px;
-    font-weight: 700;
-    color: #000;
+    line-height: 140%;
 }
 
 .modalidade-nome {

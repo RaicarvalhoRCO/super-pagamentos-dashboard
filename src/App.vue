@@ -6,9 +6,10 @@ import MobileFooter from './components/MobileFooter.vue';
 </script>
 
 <template>
-  <div class="app-container d-flex">
-    <SideBar />
+  <div class="app-container h-100 d-flex">
+
     <div class="content flex-grow-1">
+      <SideBar />
       <TopBar />
       <MainDashboard />
     </div>

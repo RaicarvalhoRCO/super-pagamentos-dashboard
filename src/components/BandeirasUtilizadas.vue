@@ -1,77 +1,94 @@
 <template>
-    <VCard class="bandeiras-card pa-6">
-        <div class="d-flex justify-space-between align-center mb-6">
-            <h3 class="text-h6 font-weight-bold">Bandeiras mais utilizadas</h3>
-            <VIcon size="small">mdi-information-outline</VIcon>
-        </div>
+  <VCard class="bandeiras-card pa-6">
+    <div class="d-flex justify-space-between align-center mb-6">
+      <h3 class="text-h6 font-weight-bold">Bandeiras mais utilizadas</h3>
+      <VIcon size="small">mdi-information-outline</VIcon>
+    </div>
 
-        <div class="grafico-barras">
-            <div v-for="bandeira in bandeiras" :key="bandeira.nome" class="bandeira-item mb-4">
-                <div class="d-flex justify-space-between align-center mb-2">
-                    <img :src="bandeira.logo" :alt="bandeira.nome" class="bandeira-logo" />
-                    <span class="bandeira-percentual">{{ bandeira.percentual }}%</span>
-                </div>
-                <div class="barra-progresso">
-                    <div class="barra-preenchida"
-                        :style="{ width: bandeira.percentual + '%', backgroundColor: bandeira.cor }"></div>
-                </div>
-            </div>
+    <div class="grafico-barras">
+      <div v-for="bandeira in bandeiras" :key="bandeira.nome" class="bandeira-item">
+        <div class="barra-vertical-container">
+          <div class="barra-vertical" :style="{ height: bandeira.percentual + '%' }">
+          </div>
         </div>
-    </VCard>
+        <img :src="bandeira.logo" :alt="bandeira.nome" class="bandeira-logo" />
+      </div>
+    </div>
+  </VCard>
 </template>
 
 <script>
+import visaLogo from '/src/assets/flags/visa.png';
+import mastercardLogo from '/src/assets/flags/mastercard.png';
+import eloLogo from '/src/assets/flags/elo.png';
+import hipercardLogo from '/src/assets/flags/hipercard.png';
+import amexLogo from '/src/assets/flags/amex.png';
+import gpayLogo from '/src/assets/flags/gpay.png';
+import applepayLogo from '/src/assets/flags/apple.png';
+import hiperLogo from '/src/assets/flags/hiper.png';
+import samsungLogo from '/src/assets/flags/samsung.png';
+
 export default {
-    name: 'BandeirasUtilizadas',
-    data() {
-        return {
-            bandeiras: [
-                { nome: 'VISA', logo: '/logos/visa.svg', percentual: 45, cor: '#1A1F71' },
-                { nome: 'Mastercard', logo: '/logos/mastercard.svg', percentual: 38, cor: '#EB001B' },
-                { nome: 'Elo', logo: '/logos/elo.svg', percentual: 25, cor: '#FFCB05' },
-                { nome: 'Hipercard', logo: '/logos/hipercard.svg', percentual: 18, cor: '#EC1C24' },
-                { nome: 'Amex', logo: '/logos/amex.svg', percentual: 12, cor: '#006FCF' },
-                { nome: 'Google Pay', logo: '/logos/gpay.svg', percentual: 8, cor: '#4285F4' },
-                { nome: 'Banricompras', logo: '/logos/banricompras.svg', percentual: 6, cor: '#00A859' },
-                { nome: 'Apple Pay', logo: '/logos/applepay.svg', percentual: 5, cor: '#000000' },
-                { nome: 'Cabal', logo: '/logos/cabal.svg', percentual: 3, cor: '#003DA5' }
-            ]
-        };
-    }
+  name: 'BandeirasUtilizadas',
+  data() {
+    return {
+      bandeiras: [
+        { nome: 'VISA', logo: visaLogo, percentual: 45 },
+        { nome: 'Mastercard', logo: mastercardLogo, percentual: 38 },
+        { nome: 'Elo', logo: eloLogo, percentual: 15 },
+        { nome: 'Hipercard', logo: hipercardLogo, percentual: 10 },
+        { nome: 'Amex', logo: amexLogo, percentual: 5 },
+        { nome: 'Google Pay', logo: gpayLogo, percentual: 8 },
+        { nome: 'Samsung Pay', logo: samsungLogo, percentual: 8 },
+        { nome: 'Apple Pay', logo: applepayLogo, percentual: 15 },
+        { nome: 'Hiper', logo: hiperLogo, percentual: 8 }
+      ]
+    };
+  }
 };
 </script>
 
 <style scoped>
 .bandeiras-card {
-    border-radius: 12px;
+  border-radius: 12px;
+}
+
+.grafico-barras {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  height: 200px;
 }
 
 .bandeira-item {
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.barra-vertical-container {
+  width: 8px;
+  background-color: #F5F5F5;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.barra-vertical {
+  width: 8px;
+  border-radius: 32px;
+  transition: height 0.3s ease;
+  min-height: 4px;
+  background-color: #0641FC;
 }
 
 .bandeira-logo {
-    height: 20px;
-    width: auto;
-}
-
-.bandeira-percentual {
-    font-size: 14px;
-    font-weight: 600;
-    color: #000;
-}
-
-.barra-progresso {
-    width: 100%;
-    height: 8px;
-    background: #f0f0f0;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.barra-preenchida {
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.3s ease;
+  height: 24px;
+  width: auto;
+  object-fit: contain;
 }
 </style>
