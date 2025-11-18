@@ -6,7 +6,7 @@ import MobileFooter from './components/MobileFooter.vue';
 </script>
 
 <template>
-  <div class="app-container h-100 d-flex">
+  <div class="app-container h-100 d-flex flex-column">
 
     <div class="content flex-grow-1">
       <SideBar />
@@ -20,6 +20,7 @@ import MobileFooter from './components/MobileFooter.vue';
 <style scoped>
 .app-container {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .content {

@@ -23,7 +23,7 @@
     <div class="logout-section w-100 d-flex align-center justify-center">
       <div class="nav-item logout-item d-flex">
         <span class="nav-text">Deslogar da conta</span>
-          <IconLogout class="icon" />
+        <IconLogout class="icon" />
       </div>
     </div>
   </aside>
@@ -145,7 +145,8 @@ export default {
   height: 46px;
   margin-bottom: 24px;
 }
-.logout-item{
+
+.logout-item {
   height: 46px;
   width: 230px;
   border: 1px solid #D9D9D9;
@@ -153,8 +154,13 @@ export default {
   background-color: white;
 }
 
-.logout-item svg{
+.logout-item svg {
   margin-left: 10px;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    display: none !important;
+  }
+}
 </style>

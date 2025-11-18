@@ -1,6 +1,6 @@
 <template>
-  <VRow>
-    <VCol v-for="status in statusList" :key="status.tipo" cols="12" sm="6" md="3">
+  <VRow class="status-container">
+    <VCol v-for="status in statusList" :key="status.tipo">
       <VCard class="status-card pa-4" elevation="0">
         <div class="d-flex justify-space-between align-center mb-2">
           <h4 class="status-card-text font-weight-medium">{{ status.tipo }}</h4>
@@ -103,5 +103,17 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .status-card {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+    .status-container {
+        margin-left: 20%;
+    }
 }
 </style>

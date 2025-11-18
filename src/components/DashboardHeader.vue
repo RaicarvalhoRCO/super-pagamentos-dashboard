@@ -1,5 +1,5 @@
 <template>
-  <VRow class="p-3 rounded" cols="12" md="12">
+  <VRow class="p-3 rounded dashboard-header" cols="12" md="12">
     <VCol>
       <VRow class="no-gutters">
         <VBtn rounded height="46" class="new_bill_button">
@@ -64,10 +64,29 @@ export default {
 
 <style scoped>
 .dashboard-header {
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #ddd;
-  padding: 16px;
+  background-color: transparent;
 }
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    display: none !important;
+
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .dashboard-header {
+    margin: 5% 0% 0% 20%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .dashboard-header {
+    flex-wrap: inherit;
+  }
+}
+
 
 .filters {
   display: flex;

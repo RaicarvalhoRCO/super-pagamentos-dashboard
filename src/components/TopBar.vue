@@ -59,7 +59,7 @@ export default {
 }
 
 .logo {
-    cursor: pointer; 
+    cursor: pointer;
     padding-left: 16px;
 }
 
@@ -69,7 +69,11 @@ export default {
     font-size: 20px;
     line-height: 100%;
     margin-right: 45%;
+    @media (max-width: 1400px) {
+      margin-right: 25%;
+    }
 }
+
 
 .avatar {
     width: 36px;
@@ -95,5 +99,11 @@ export default {
     font-size: 12px;
     line-height: 100%;
     color: #86898B;
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        display: none !important;
+    }
 }
 </style>

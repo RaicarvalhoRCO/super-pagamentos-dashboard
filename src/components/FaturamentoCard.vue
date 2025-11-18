@@ -9,7 +9,7 @@
         <div class="d-flex align-center mt-2">
           <span class="text-h4 font-weight-bold">R$ {{ formatarValor(faturamentoTotal) }}</span>
           <div class="crescimento ml-3">
-            <VIcon size="x-small" >mdi-arrow-up</VIcon>
+            <VIcon size="x-small">mdi-arrow-up</VIcon>
             <span>{{ crescimento }}%</span>
             <p style="color: #86898B; font-size: 12px;">
               Em crescimento
@@ -319,10 +319,23 @@ export default {
   border: 1px solid #D9D9D9;
 }
 
-.crescimento span, .crescimento i{
+.crescimento span,
+.crescimento i {
   color: #34A853;
   font-family: Plus Jakarta Sans;
   font-weight: 800;
   font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .faturamento-card {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .faturamento-card {
+    margin-left: 20%;
+  }
 }
 </style>

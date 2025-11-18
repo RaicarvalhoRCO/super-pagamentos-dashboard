@@ -1,4 +1,4 @@
-  <template>
+<template>
   <VCard class="transferencia-pendente">
     <VCardText class="d-flex align-center justify-space-between">
       <div class="d-flex align-center">
@@ -106,5 +106,18 @@ export default defineComponent({
   .autorizar-btn {
     width: 100%;
   }
+}
+
+@media (max-width: 768px) {
+  .transferencia-pendente {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1300px) {
+    .transferencia-pendente {
+        margin-left: 20%;
+    }
 }
 </style>
