@@ -15,9 +15,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "bootstrap": "^5.3.0",
+    "@mdi/font": "^7.4.47",
+    "bootstrap": "^5.3.8",
     "vue": "^3.5.22",
-    "vue-router": "^4.6.3"
+    "vue-router": "^4.6.3",
+    "vuetify": "^3.10.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
