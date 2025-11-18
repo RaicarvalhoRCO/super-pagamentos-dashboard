@@ -10,7 +10,7 @@
                 <div class="d-flex gap-4 mx-4">
                     <IconCircle />
                     <IconSettings />
-                    <IconBell />
+                    <IconBellBlack />
                 </div>
             </div>
             <div class="d-flex gap-2 align-items-center">
@@ -27,14 +27,14 @@
 
 <script>
 import IconCircle from './icons/IconCircle.vue';
-import IconBell from './icons/IconBell.vue';
 import IconSettings from './icons/IconConfiguracoes.vue';
+import IconBellBlack from './icons/IconBellBlack.vue';
 
 export default {
     name: 'TopBar',
     components: {
         IconCircle,
-        IconBell,
+        IconBellBlack,
         IconSettings,
     },
 };

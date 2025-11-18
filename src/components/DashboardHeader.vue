@@ -117,6 +117,7 @@ export default {
   text-transform: none;
 }
 
+
 .selector_container {
   height: 48px;
   border: 1px solid #D9D9D9;

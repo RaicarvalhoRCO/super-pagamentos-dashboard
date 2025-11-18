@@ -138,7 +138,7 @@ export default defineComponent({
 }
 
 .top-section{
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 </style>
